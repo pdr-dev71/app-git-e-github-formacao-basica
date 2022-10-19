@@ -6,9 +6,6 @@ class PrimeirosPassosGit extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenWith = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
-
     Future _openUrl(String url) async {
       var urllaunchable = await canLaunchUrl(Uri.parse(url));
       print(url);
