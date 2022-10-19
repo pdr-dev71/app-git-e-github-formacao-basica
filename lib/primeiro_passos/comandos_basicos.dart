@@ -11,15 +11,15 @@ class ComandosBasicos extends StatelessWidget {
         title: const Text('Comandos basicos'),
       ),
       body: Column(
-        children: const [
-          Card(
+        children: [
+          const Card(
             color: Colors.white,
             child: ListTile(
               title: Text('git init'),
               subtitle: Text('Inicia um repositório local'),
             ),
           ),
-          Card(
+          const Card(
             color: Colors.white,
             child: ListTile(
               title: Text('ls -la'),
@@ -28,9 +28,61 @@ class ComandosBasicos extends StatelessWidget {
           ),
           Card(
             color: Colors.white,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const ListTile(
+                  title: Text('git add .'),
+                  subtitle: Text('Adiciona todos os arquivos'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: const [
+                      Text('Variações:'),
+                      Text('git add --all'),
+                      Text('git add -A'),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Card(
+            color: Colors.white,
             child: ListTile(
-              title: Text('git add .'),
-              subtitle: Text('Adiciona todos os arquivos'),
+              title: Text('git status'),
+              subtitle: Text('Informa o status do repositório'),
+            ),
+          ),
+          const Card(
+            color: Colors.white,
+            child: ListTile(
+              title: Text('git commit -m "Mensagem"'),
+              subtitle: Text(
+                  'Comita os arquivos, a flag -m é para adicionar uma mensagem'),
+            ),
+          ),
+          const Card(
+            color: Colors.white,
+            child: ListTile(
+              title: Text('git log'),
+              subtitle: Text(
+                  'Mostra o histórico de commits, a flag --oneline mostra de forma resumida'),
+            ),
+          ),
+          const Card(
+            color: Colors.white,
+            child: ListTile(
+              title: Text('git config --global user.name "Seu nome"'),
+              subtitle: Text('Configura o nome do usuário'),
+            ),
+          ),
+          const Card(
+            color: Colors.white,
+            child: ListTile(
+              title: Text('git config --global user.email "Seu email"'),
+              subtitle: Text('Configura o email do usuário'),
             ),
           ),
         ],

@@ -33,43 +33,43 @@ class PrimeirosPassosGit extends StatelessWidget {
         scrollDirection: Axis.vertical,
         children: [
           Card(
-            child: Column(
-              children: <Widget>[
-                Flexible(
-                  flex: 2,
-                  child: Container(
-                    child: const Text('O que é git?'),
-                  ),
-                ),
-                Flexible(
-                  flex: 6,
-                  child: Container(
-                    color: Colors.yellow,
-                    child: Column(
-                      children: [
-                        InkWell(
-                          onTap: () async => await _openUrl(
-                              'https://git-scm.com/download/mac'),
-                          child: const Text(
-                            'Mac os',
-                            style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              color: Colors.blue,
-                              fontSize: 20,
-                            ),
-                          ),
-                        ),
-                      ],
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: <Widget>[
+                  const Flexible(
+                    flex: 2,
+                    child: SizedBox(
+                      child: Text('O que é git?'),
                     ),
                   ),
-                ),
-                Flexible(
-                  flex: 1,
-                  child: Container(
-                    color: Colors.green,
+                  Flexible(
+                    flex: 6,
+                    child: Container(
+                      child: Column(
+                        children: [
+                          InkWell(
+                            onTap: () async =>
+                                await _openUrl('https://gitfichas.com/'),
+                            child: const Text(
+                              'Git fichas',
+                              style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                color: Colors.blue,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Card(
@@ -77,135 +77,58 @@ class PrimeirosPassosGit extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
             ),
-            child: Column(
-              children: [
-                const Text('O que é git'),
-                InkWell(
-                  onTap: () async => await _openUrl('https://gitfichas.com/'),
-                  child: const Padding(
-                    padding: EdgeInsets.only(top: 14.0),
-                    child: Text(
-                      'Git fichas',
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
-                        color: Colors.blue,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            width: screenWith * .4,
-            height: 100,
-            child: Card(
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Column(
-                children: [
-                  Flexible(
+                children: <Widget>[
+                  const Flexible(
                     flex: 2,
-                    child: Container(
-                      child: const Text('Instalação do git'),
+                    child: SizedBox(
+                      child: Text('Instalação do git'),
                     ),
                   ),
                   Flexible(
-                    flex: 5,
+                    flex: 6,
                     child: Container(
-                      color: Colors.grey,
-                      child: InkWell(
-                        onTap: () async =>
-                            await _openUrl('https://git-scm.com/download/win'),
-                        child: const Text(
-                          'Windows',
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            color: Colors.blue,
+                      child: Column(
+                        children: [
+                          InkWell(
+                            onTap: () async => await _openUrl(
+                                'https://git-scm.com/download/win'),
+                            child: const Text(
+                              'Windows',
+                              style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                color: Colors.blue,
+                                fontSize: 20,
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Flexible(
-                    flex: 3,
-                    child: Container(
-                      color: Colors.grey,
-                      child: InkWell(
-                        onTap: () =>
-                            _openUrl('https://git-scm.com/download/linux'),
-                        child: const Text(
-                          'Linux',
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            color: Colors.blue,
+                          InkWell(
+                            onTap: () async => await _openUrl(
+                                'https://git-scm.com/download/linux'),
+                            child: const Text(
+                              'Linux',
+                              style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                color: Colors.blue,
+                                fontSize: 20,
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Flexible(
-                    flex: 3,
-                    child: Container(
-                      color: Colors.grey,
-                      child: InkWell(
-                        onTap: () async =>
-                            await _openUrl('https://git-scm.com/download/mac'),
-                        child: const Text(
-                          'Mac os',
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            color: Colors.blue,
+                          InkWell(
+                            onTap: () async => await _openUrl(
+                                'https://git-scm.com/download/mac'),
+                            child: const Text(
+                              'Mac Os',
+                              style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                color: Colors.blue,
+                                fontSize: 20,
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          GestureDetector(
-            onTap: () => Navigator.pushNamed(context, '/ComandosBasicos'),
-            child: SizedBox(
-              width: screenWith * .4,
-              height: 100,
-              child: Card(
-                clipBehavior: Clip.antiAliasWithSaveLayer,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-                child: Column(
-                  children: const [
-                    Text('Comandos básicos'),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            width: screenWith * .4,
-            height: 100,
-            child: Card(
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-              child: Column(
-                children: [
-                  const Text('Staging'),
-                  InkWell(
-                    onTap: () async => await _openUrl('https://gitfichas.com/'),
-                    child: const Padding(
-                      padding: EdgeInsets.only(top: 14.0),
-                      child: Text(
-                        'Git fichas',
-                        style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          color: Colors.blue,
-                        ),
+                        ],
                       ),
                     ),
                   ),
@@ -214,43 +137,182 @@ class PrimeirosPassosGit extends StatelessWidget {
             ),
           ),
           Card(
-            child: Column(
-              children: <Widget>[
-                Flexible(
-                  flex: 2,
-                  child: Container(
-                    color: Colors.red,
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 12.0),
+              child: Column(
+                children: <Widget>[
+                  const Flexible(
+                    flex: 2,
+                    child: SizedBox(
+                      child: Text('Comandos básicos'),
+                    ),
                   ),
-                ),
-                Flexible(
-                  flex: 2,
-                  child: Container(
-                    color: Colors.yellow,
+                  Flexible(
+                    flex: 6,
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          InkWell(
+                            onTap: () => Navigator.pushNamed(
+                                context, '/ComandosBasicos'),
+                            child: const Icon(
+                              Icons.arrow_forward_ios,
+                              color: Colors.blue,
+                              size: 30,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 12.0),
+              child: Column(
+                children: [
+                  const Flexible(
+                    flex: 2,
+                    child: SizedBox(
+                      child: Text('Delete arquivos'),
+                    ),
+                  ),
+                  Flexible(
+                    flex: 6,
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         InkWell(
-                          onTap: () async => await _openUrl(
-                              'https://git-scm.com/download/mac'),
-                          child: const Text(
-                            'Mac os',
-                            style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              color: Colors.blue,
-                              fontSize: 20,
-                            ),
+                          onTap: () => Navigator.pushNamed(context, '/Delete'),
+                          child: const Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.blue,
+                            size: 30,
                           ),
                         ),
                       ],
                     ),
                   ),
-                ),
-                Flexible(
-                  flex: 2,
-                  child: Container(
-                    color: Colors.green,
+                ],
+              ),
+            ),
+          ),
+          Card(
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 12.0),
+              child: Column(
+                children: [
+                  const Flexible(
+                    flex: 2,
+                    child: SizedBox(
+                      child: Text('Staging'),
+                    ),
                   ),
-                ),
-              ],
+                  Flexible(
+                    flex: 6,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        InkWell(
+                          onTap: () => Navigator.pushNamed(context, '/Staging'),
+                          child: const Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.blue,
+                            size: 30,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 12.0),
+              child: Column(
+                children: [
+                  const Flexible(
+                    flex: 2,
+                    child: SizedBox(
+                      child: Text('Logs'),
+                    ),
+                  ),
+                  Flexible(
+                    flex: 6,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        InkWell(
+                          onTap: () => Navigator.pushNamed(context, '/Logs'),
+                          child: const Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.blue,
+                            size: 30,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 12.0),
+              child: Column(
+                children: [
+                  const Flexible(
+                    flex: 2,
+                    child: SizedBox(
+                      child: Text('Branches'),
+                    ),
+                  ),
+                  Flexible(
+                    flex: 6,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        InkWell(
+                          onTap: () =>
+                              Navigator.pushNamed(context, '/Branches'),
+                          child: const Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.blue,
+                            size: 30,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
