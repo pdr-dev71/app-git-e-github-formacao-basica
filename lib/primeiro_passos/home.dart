@@ -25,7 +25,7 @@ class PrimeirosPassosGit extends StatelessWidget {
         title: const Text(''),
       ),
       body: GridView.count(
-        padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+        padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
         crossAxisCount: 2,
         scrollDirection: Axis.vertical,
         children: [
@@ -35,31 +35,42 @@ class PrimeirosPassosGit extends StatelessWidget {
               borderRadius: BorderRadius.circular(20.0),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(top: 12.0),
               child: Column(
                 children: <Widget>[
-                  const Flexible(
-                    flex: 2,
-                    child: SizedBox(
-                      child: Text('O que é git?'),
+                  Flexible(
+                    child: Container(
+                      child: const Text('O que é git?'),
                     ),
                   ),
                   Flexible(
                     flex: 6,
                     child: Container(
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          InkWell(
-                            onTap: () async =>
-                                await _openUrl('https://gitfichas.com/'),
-                            child: const Text(
-                              'Git fichas',
-                              style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: Colors.blue,
-                                fontSize: 20,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              InkWell(
+                                onTap: () async =>
+                                    await _openUrl('https://gitfichas.com/'),
+                                child: const Text(
+                                  'Git fichas',
+                                  style: TextStyle(
+                                    decoration: TextDecoration.underline,
+                                    color: Colors.blue,
+                                    fontSize: 18,
+                                  ),
+                                ),
                               ),
-                            ),
+                              const SizedBox(width: 8),
+                              const Icon(
+                                Icons.arrow_forward_ios,
+                                color: Colors.black,
+                                size: 18,
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -75,7 +86,7 @@ class PrimeirosPassosGit extends StatelessWidget {
               borderRadius: BorderRadius.circular(20.0),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(top: 12.0),
               child: Column(
                 children: <Widget>[
                   const Flexible(
@@ -88,41 +99,75 @@ class PrimeirosPassosGit extends StatelessWidget {
                     flex: 6,
                     child: Container(
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          InkWell(
-                            onTap: () async => await _openUrl(
-                                'https://git-scm.com/download/win'),
-                            child: const Text(
-                              'Windows',
-                              style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: Colors.blue,
-                                fontSize: 20,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              InkWell(
+                                onTap: () async => await _openUrl(
+                                    'https://git-scm.com/download/win'),
+                                child: const Text(
+                                  'Windows',
+                                  style: TextStyle(
+                                    decoration: TextDecoration.underline,
+                                    color: Colors.blue,
+                                    fontSize: 18,
+                                  ),
+                                ),
                               ),
-                            ),
+                              const SizedBox(width: 8),
+                              const Icon(
+                                Icons.arrow_forward_ios,
+                                color: Colors.black,
+                                size: 18,
+                              ),
+                            ],
                           ),
                           InkWell(
                             onTap: () async => await _openUrl(
                                 'https://git-scm.com/download/linux'),
-                            child: const Text(
-                              'Linux',
-                              style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: Colors.blue,
-                                fontSize: 20,
-                              ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text(
+                                  'Linux',
+                                  style: TextStyle(
+                                    decoration: TextDecoration.underline,
+                                    color: Colors.blue,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                SizedBox(width: 8),
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: Colors.black,
+                                  size: 18,
+                                ),
+                              ],
                             ),
                           ),
                           InkWell(
                             onTap: () async => await _openUrl(
                                 'https://git-scm.com/download/mac'),
-                            child: const Text(
-                              'Mac Os',
-                              style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: Colors.blue,
-                                fontSize: 20,
-                              ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text(
+                                  'Mac Os',
+                                  style: TextStyle(
+                                    decoration: TextDecoration.underline,
+                                    color: Colors.blue,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                SizedBox(width: 8),
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: Colors.black,
+                                  size: 18,
+                                ),
+                              ],
                             ),
                           ),
                         ],
