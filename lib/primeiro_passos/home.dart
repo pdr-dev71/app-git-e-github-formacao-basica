@@ -8,14 +8,14 @@ class PrimeirosPassosGit extends StatelessWidget {
   Widget build(BuildContext context) {
     Future _openUrl(String url) async {
       var urllaunchable = await canLaunchUrl(Uri.parse(url));
-      print(url);
+      debugPrint(url);
       if (urllaunchable) {
         await launchUrl(
           Uri.parse(url),
           mode: LaunchMode.externalApplication,
         );
       } else {
-        print("URL can't be launched.");
+        debugPrint("URL can't be launched.");
       }
     }
 
