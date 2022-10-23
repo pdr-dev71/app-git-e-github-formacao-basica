@@ -1,16 +1,13 @@
-# git_e_github_formacao_basica
+# Aplicativo > Curso Git
 
-A new Flutter project.
+## :computer: Sobre o Aplicativo 
+O seguinte aplicativo foi feito ao decorrer do curso [Git e GitHub: Formação Básica](https://www.linkedin.com/learning/git-e-github-formacao-basica/aprender-a-utilizar-git-e-github?autoplay=true) o qual utilizei para modularizar a aplicação que fiz, que consiste em pequenos modulos os quais possuem comandos git aprendidos a longo do curso bem como as suas respectivas descrições.
 
-## Getting Started
+## :art: Interfaces do aplicativo
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Primeiro Modulo
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/53342708/197411515-d149d93e-8d30-4e02-a118-9eb2d4047fa6.gif)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Último Modulo
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/53342708/197411551-f8f2db38-023b-48c7-974b-5b39f5387ee3.gif)
